@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Rubean App</string>
+    <string name="choose_a_word_hint">Repeat all the words and add a new one!</string>
+    <string name="you_won">Congratulations you won the game</string>
+    <string name="end_game_reason_repeated_word">Because the word %s was repeated</string>
+    <string name="end_game_reason_more_than_one_word">Because the previous move had more than one word</string>
+    <string name="end_game_reason_misstype">Because it was typed %s instead of %s</string>
+    <string name="you_lost">You lost the game to the Bot</string>
+    <string name="you_draw">This is a draw! You have played over the turn limit</string>
+    <string name="error_invalid_text">You can\'t type empty words</string>
+</resources>
