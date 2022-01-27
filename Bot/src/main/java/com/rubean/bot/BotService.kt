@@ -3,6 +3,7 @@ package com.rubean.bot
 import android.app.Service
 import android.content.Intent
 import android.os.*
+import android.util.Log
 
 const val BOT_SEND_WORD_ACTION_CODE = 1
 const val BOT_GAME_OVER = 2
@@ -18,6 +19,7 @@ class BotService : Service() {
         private var dummyWordGameMovePicker = DummyWordGameMovePicker()
 
         override fun handleMessage(msg: Message) {
+            Log.d("BotService", "Receiving message ${msg.toString()}")
             when (msg.what) {
                 BOT_SEND_WORD_ACTION_CODE -> makeAMove(msg)
                 BOT_GAME_OVER -> restartGame()
@@ -47,6 +49,7 @@ class BotService : Service() {
     }
 
     override fun onBind(intent: Intent): IBinder? {
+        Log.d("BotService", "Binding")
         messenger = Messenger(UserResponseHandler())
         return messenger.binder
     }
